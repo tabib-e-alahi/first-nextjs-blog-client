@@ -5,7 +5,7 @@ export default async function AboutPage() {
   // })
 
   //for checking the error.tsx working or not
-  throw new Error("Something wen very very wrong");
+  // throw new Error("Something went very very wrong");
   
   return (
     <div>

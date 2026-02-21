@@ -1,5 +1,5 @@
 export default async function AboutPage() {
-  await new Promise((resolve)=>{
+  await new Promise((resolve) => {
     setTimeout(resolve, 4000);
   })
   return (

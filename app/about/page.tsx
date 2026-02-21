@@ -1,5 +1,5 @@
-export default function AboutPage() {
-  new Pro
+export default async function AboutPage() {
+  await new Promise.all()
   return (
     <div>
       <h1>THis is about page</h1>

@@ -5,9 +5,9 @@ export default function RootLayout() {
     <div>
       <nav className="flex gap-10 m-8">
             <Link className="hover:underline" href="/marketing">Marketing</Link>
-            <Link className="hover:underline" href="/marketing">Settings</Link>
-            <Link className="hover:underline" href="">Sales</Link>
-            <Link className="hover:underline" href="">Testing</Link>
+            <Link className="hover:underline" href="/marketing/settings">Settings</Link>
+            <Link className="hover:underline" href="/sales">Sales</Link>
+            <Link className="hover:underline" href="/testting">Testing</Link>
       </nav>
     </div>
   );

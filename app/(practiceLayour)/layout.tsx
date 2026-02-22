@@ -1,7 +1,14 @@
-export default function layout() {
+import Link from "next/link";
+
+export default function RootLayout() {
   return (
     <div>
-      <h1>layout</h1>
+      <nav>
+            <Link href=""></Link>
+            <Link href=""></Link>
+            <Link href=""></Link>
+            <Link href=""></Link>
+      </nav>
     </div>
   );
 }

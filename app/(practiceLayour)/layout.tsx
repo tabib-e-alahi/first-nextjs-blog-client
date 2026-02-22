@@ -8,7 +8,7 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
             <Link className="hover:underline" href="/marketing">Marketing</Link>
             <Link className="hover:underline" href="/marketing/settings">Settings</Link>
             <Link className="hover:underline" href="/sales">Sales</Link>
-            <Link className="hover:underline" href="/testting">Testing</Link>
+            <Link className="hover:underline" href="/testing">Testing</Link>
       </nav>
       {children}
     </div>

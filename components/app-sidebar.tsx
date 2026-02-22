@@ -28,8 +28,12 @@ const data = {
           url: "/",
         },
         {
-          title: "Project Structure",
-          url: "#",
+          title: "Write Blog",
+          url: "/dashboard/write-blog",
+        },
+        {
+          title: "Analystics",
+          url: "/dashboard/analystics",
         },
       ],
     },

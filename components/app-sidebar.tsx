@@ -28,6 +28,10 @@ const data = {
           url: "/",
         },
         {
+          title: "Dashboard",
+          url: "/",
+        },
+        {
           title: "Write Blog",
           url: "/dashboard/write-blog",
         },

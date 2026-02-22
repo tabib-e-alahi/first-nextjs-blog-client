@@ -1,10 +1,11 @@
 import Link from "next/link";
 
-export default function RootLayout({ children, marketingSlot, salesSlot }: {
-      children: React.ReactNode; 
-      marketingSlot: React.ReactNode;
-      salesSlot: React.ReactNode;
-}) {
+export default function RootLayout({ children, marketingSlot, salesSlot }:
+      {
+            children: React.ReactNode;
+            marketingSlot: React.ReactNode;
+            salesSlot: React.ReactNode;
+      }) {
       return (
             <div>
                   <nav className="flex gap-10 m-8">

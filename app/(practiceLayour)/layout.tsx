@@ -12,7 +12,8 @@ export default function RootLayout({ children, marketingSlot, salesSlot }: { chi
                         <Link className="hover:underline" href="/testing">Testing</Link>
                   </nav>
                   <div className="flex">
-
+                        {marketingSlot}
+                        {salesSlot}
                   </div>
                   {children}
             </div>

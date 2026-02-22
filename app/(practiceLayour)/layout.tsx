@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function RootLayout() {
+export default function RootLayout({children}:{children: React.ReactNode}) {
   return (
     <div>
       <nav className="flex gap-10 m-8">
@@ -10,6 +10,7 @@ export default function RootLayout() {
             <Link className="hover:underline" href="/sales">Sales</Link>
             <Link className="hover:underline" href="/testting">Testing</Link>
       </nav>
+      {}
     </div>
   );
 }

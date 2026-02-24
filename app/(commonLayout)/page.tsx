@@ -1,7 +1,17 @@
 import { authClient } from "@/lib/auth-client";
+import { cookies } from "next/headers";
 
 export default async function Home() {
-  const session = await authClient.getSession();
+  const cookieStore = await cookies();
+
+  const res= await fetch("http://localhost:8000/api/auth/get-session",{
+    headers:{
+      Cookie: cookieStore.toString()
+    }
+  })
+  
+  const session = await res.json();
+
   console.log(session);
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">

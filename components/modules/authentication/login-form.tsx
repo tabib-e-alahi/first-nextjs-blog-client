@@ -1,4 +1,4 @@
-
+"use client"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -23,10 +23,10 @@ export function LoginForm({
   ...props
 }: React.ComponentProps<"div">) {
 
-  const handleGoogleLogin = async()=>{
+  const handleGoogleLogin = async () => {
     const data = authClient.signIn.social({
-      provider:"google",
-      callbackURL:"http://localhost:3000"
+      provider: "google",
+      callbackURL: "http://localhost:3000"
     })
     console.log(data);
   }
@@ -67,7 +67,7 @@ export function LoginForm({
               </Field>
               <Field>
                 <Button type="submit">Login</Button>
-                <Button variant="outline" type="button">
+                <Button onClick={() => handleGoogleLogin()} variant="outline" type="button">
                   Login with Google
                 </Button>
                 <FieldDescription className="text-center">

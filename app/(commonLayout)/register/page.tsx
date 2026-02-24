@@ -1,4 +1,4 @@
-import { RegsiterForm } from "@/components/register-form"
+import { RegsiterForm } from "@/components/modules/authentication/register-form"
 
 export default function Page() {
   return (

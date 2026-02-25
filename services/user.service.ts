@@ -17,9 +17,10 @@ export const userServie = {
 
             const session = await res.json();
 
-            return session;
+            return { data: session, error: null };
         } catch (error) {
-            console.error(error)
+            console.error(error);
+            return {data: null, error: {mess}}
         }
     },
 };

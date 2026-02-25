@@ -1,12 +1,14 @@
 import { cookies } from "next/headers";
 
+const AUTH_URL = process.env.AUTH_URL;
+
 export const userServie = {
     getSession: async function () {
         try {
             const cookieStore = await cookies();
 
             const res = await fetch(
-                "http://localhost:8000/api/auth/get-session",
+                `${AUTH_URL}/get-session`,
                 {
                     headers: {
                         Cookie: cookieStore.toString(),
@@ -16,7 +18,7 @@ export const userServie = {
             );
 
             const session = await res.json();
-            if(!session.data){
+            if(!session){
                 return {data: null, error: {message: "Session is missiong."}}  
             }
             return { data: session, error: null };

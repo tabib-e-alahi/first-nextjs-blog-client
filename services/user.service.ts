@@ -17,7 +17,7 @@ export const userServie = {
 
             const session = await res.json();
             if(!session.data){
-                return {data: null, error: {message: "Something went wrong."}}  
+                return {data: null, error: {message: "Session is missiong."}}  
             }
             return { data: session, error: null };
         } catch (error) {

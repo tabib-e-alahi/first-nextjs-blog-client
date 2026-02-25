@@ -1,1 +1,5 @@
-export const userServie
+export const userServie = {
+      getSession: async function(){
+            try
+      }
+}

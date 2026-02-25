@@ -1,4 +1,3 @@
-import { authClient } from "@/lib/auth-client";
 import { cookies } from "next/headers";
 
 export default async function Home() {

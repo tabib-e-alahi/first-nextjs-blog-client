@@ -1,0 +1,9 @@
+{
+      "editor.formatOnSave": false,
+      "editor.defaultFormatter": null,
+      "editor.wordWrap": "on",
+      "emmet.includeLanguages": {
+            "typescript": "typescriptreact",
+            "javascript": "javascriptreact"
+      }
+}

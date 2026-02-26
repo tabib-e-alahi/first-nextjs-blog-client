@@ -15,6 +15,8 @@ export async function proxy(request: NextRequest) {
     if(!isAuthecticated){
       return NextResponse.redirect(new URL("/login", request.url));
     }
+
+    
     return NextResponse.next();
 }
 

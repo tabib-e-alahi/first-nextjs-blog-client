@@ -12,7 +12,7 @@ export async function proxy(request: NextRequest) {
         isAuthecticated = true;
         isAdmin = data.user.role === Roles.admin;
     }
-
+    //user is not authencticated means was not logged in yet
     if (!isAuthecticated) {
         return NextResponse.redirect(new URL("/login", request.url));
     }

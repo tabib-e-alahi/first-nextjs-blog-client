@@ -16,11 +16,11 @@ export async function proxy(request: NextRequest) {
     if (!isAuthecticated) {
         return NextResponse.redirect(new URL("/login", request.url));
     }
-    //
+    //admin and trying to enter a user dashboard, so redirecting to admin dashboard
     if (isAdmin && pathName.startsWith("/dashboard")) {
         return NextResponse.redirect(new URL("/admin-dashboard", request.url));
     }
-
+    // not admin and trying to enter a admin dashboard, so redirecting to user dashboard
     if (!isAdmin && pathName.startsWith("/admin-dashboard")) {
         return NextResponse.redirect(new URL("/dashboard", request.url));
     }

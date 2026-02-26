@@ -1,6 +1,7 @@
+import { NextRequest } from "next/server";
 
-export function proxy(){
-      console.log();
+export function proxy(request: NextRequest){
+      console.log(request.url);
 }
 
 export const config = {

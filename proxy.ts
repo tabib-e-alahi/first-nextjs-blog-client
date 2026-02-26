@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function proxy(request: NextRequest) {
-    console.log(request.url);
+    console.log(request.url.);
 
     return NextResponse.next();
 }

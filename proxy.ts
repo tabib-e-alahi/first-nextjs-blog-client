@@ -6,6 +6,10 @@ export async function proxy(request: NextRequest) {
     let isAuthecticated = false;
     let isAdmin = false;
     const { data } = await userServie.getSession();
+    if(data){
+      isAuthecticated = true;
+      // isAdmin = data.user.role === ""
+    }
     return NextResponse.next();
 }
 

@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import { userServie } from "./services/user.service";
 
-export function proxy(request: NextRequest) {
-//     console.log(request.url);
-      const {data} = 
+export async function proxy(request: NextRequest) {
+    //     console.log(request.url);
+    let isAuthecticated = false;
+    let isAdmin = false;
+    const { data } = await userServie.getSession();
     return NextResponse.next();
 }
 

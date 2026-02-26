@@ -16,13 +16,15 @@ export async function proxy(request: NextRequest) {
     if (!isAuthecticated) {
         return NextResponse.redirect(new URL("/login", request.url));
     }
-    //user is authenticated and role = "ADMIN"
+    //*user is authenticated and role = "ADMIN"
     //ADMIN can not visit user dashboard
-    //so red
+    //so redirecting to admin dashboard
     if (isAdmin && pathName.startsWith("/dashboard")) {
         return NextResponse.redirect(new URL("/admin-dashboard", request.url));
     }
-    // not admin and trying to enter a admin dashboard, so redirecting to user dashboard
+    //user is authenticated and role = "USER"
+    //USER can not visit admin dashboard
+    // so redirecting to user dashboard
     if (!isAdmin && pathName.startsWith("/admin-dashboard")) {
         return NextResponse.redirect(new URL("/dashboard", request.url));
     }

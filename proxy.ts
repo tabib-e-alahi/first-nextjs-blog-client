@@ -4,7 +4,7 @@ import { Roles } from "./constants/role";
 
 export async function proxy(request: NextRequest) {
     //     console.log(request.url);
-    const pathName = 
+    const pathName = request.nextUrl.pathname;
     let isAuthecticated = false;
     let isAdmin = false;
     const { data } = await userServie.getSession();
@@ -16,8 +16,7 @@ export async function proxy(request: NextRequest) {
     if(!isAuthecticated){
       return NextResponse.redirect(new URL("/login", request.url));
     }
-
-
+    if(isAdmin )
     return NextResponse.next();
 }
 

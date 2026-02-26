@@ -11,6 +11,10 @@ export async function proxy(request: NextRequest) {
         isAuthecticated = true;
         isAdmin = data.user.role === Roles.admin;
     }
+
+    if(!isAuthecticated){
+      return Nex
+    }
     return NextResponse.next();
 }
 

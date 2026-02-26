@@ -13,11 +13,16 @@ export async function proxy(request: NextRequest) {
         isAdmin = data.user.role === Roles.admin;
     }
 
-    if(!isAuthecticated){
-      return NextResponse.redirect(new URL("/login", request.url));
+    if (!isAuthecticated) {
+        return NextResponse.redirect(new URL("/login", request.url));
     }
-    if(isAdmin && pathName.startsWith("/dashboard")){
-      return NextResponse.redirect(new URL("/"))
+    //
+    if (isAdmin && pathName.startsWith("/dashboard")) {
+        return NextResponse.redirect(new URL("/admin-dashboard", request.url));
+    }
+
+    if (!isAdmin && pathName.startsWith("/admin-dashboard")) {
+        return NextResponse.redirect(new URL("/dashboard", request.url));
     }
     return NextResponse.next();
 }

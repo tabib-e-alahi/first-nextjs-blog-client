@@ -12,7 +12,7 @@ export async function proxy(request: NextRequest) {
         isAuthecticated = true;
         isAdmin = data.user.role === Roles.admin;
     }
-    //user is not authencticated means was not logged in yet
+    //*user is not authencticated means was not logged in yet
     if (!isAuthecticated) {
         return NextResponse.redirect(new URL("/login", request.url));
     }
@@ -22,7 +22,7 @@ export async function proxy(request: NextRequest) {
     if (isAdmin && pathName.startsWith("/dashboard")) {
         return NextResponse.redirect(new URL("/admin-dashboard", request.url));
     }
-    //user is authenticated and role = "USER"
+    //*user is authenticated and role = "USER"
     //USER can not visit admin dashboard
     // so redirecting to user dashboard
     if (!isAdmin && pathName.startsWith("/admin-dashboard")) {

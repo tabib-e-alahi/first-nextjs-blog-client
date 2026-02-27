@@ -2,6 +2,8 @@ import { env } from "@/env";
 
 const API_URL = env.API_URL;
 
+//* No Dynamic and No {cache: no-store } :  SSG
+
 export const blogService = {
     getBlogPosts: async function () {
         try {

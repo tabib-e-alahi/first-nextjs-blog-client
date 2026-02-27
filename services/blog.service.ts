@@ -4,7 +4,7 @@ const API_URL = env.API_URL;
 
 //* No Dynamic and No {cache: no-store } : SSG --> Static Page
 //* {cache: no-store } : SSR --> Dynamic Page
-//* {cache: no-store } : ISR --> Mix between static and dyanimc
+//* next: { revalidate: 10 } : ISR --> Mix between static and dyanimc
 
 export const blogService = {
     getBlogPosts: async function () {

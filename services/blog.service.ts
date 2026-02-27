@@ -7,9 +7,9 @@ export const blogService = {
             try {
                   const res = await fetch(`${API_URL}/posts`);
                   const data = await res.json()
-                  if(data.sucess){
-                        return {data: null, error:{message:"Data is missing"}}
-                  }
+                  // if(data.sucess){
+                  //       return {data: null, error:{message:"Data is missing"}}
+                  // }
                   return {data: data, error: null}
             } catch (error) {
                   return{data: null, error:{message:"Something went wrong"}}

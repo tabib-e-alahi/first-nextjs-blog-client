@@ -5,7 +5,7 @@ const API_URL = env.API_URL
 export const blogService = {
       getBlogPosts: async function () {
             try {
-                  const res = await fetch(`${API_URL}/posts`);
+                  const res = await fetch(`${API_URL}/posts`, {next:{revalidate: }});
                   const data = await res.json()
                   // if(data.sucess){
                   //       return {data: null, error:{message:"Data is missing"}}
